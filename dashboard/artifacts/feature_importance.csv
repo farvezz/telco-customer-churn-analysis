@@ -1,0 +1,13 @@
+,importance
+cat__Contract_Month-to-month,0.4112185214855249
+num__tenure,0.14516012295507183
+cat__InternetService_Fiber optic,0.11154702934767817
+num__TotalCharges,0.0780719293099007
+num__MonthlyCharges,0.06565908492658722
+cat__PaymentMethod_Electronic check,0.05542662823282234
+cat__InternetService_No,0.024955579155056192
+cat__PaperlessBilling_Yes,0.019998581876008205
+cat__OnlineSecurity_Yes,0.014111002415642051
+cat__TechSupport_Yes,0.012877322557441808
+cat__MultipleLines_Yes,0.008160659336959737
+cat__StreamingMovies_Yes,0.00778317131956987

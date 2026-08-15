@@ -1,0 +1,19 @@
+category,churn_rate_pct,n_customers,field
+Month-to-month,42.7,3875,Contract
+One year,11.3,1473,Contract
+Two year,2.8,1695,Contract
+DSL,19.0,2421,InternetService
+Fiber optic,41.9,3096,InternetService
+No,7.4,1526,InternetService
+Bank transfer (automatic),16.7,1544,PaymentMethod
+Credit card (automatic),15.2,1522,PaymentMethod
+Electronic check,45.3,2365,PaymentMethod
+Mailed check,19.1,1612,PaymentMethod
+0,23.6,5901,SeniorCitizen
+1,41.7,1142,SeniorCitizen
+No,33.0,3641,Partner
+Yes,19.7,3402,Partner
+No,31.3,4933,Dependents
+Yes,15.5,2110,Dependents
+No,16.3,2872,PaperlessBilling
+Yes,33.6,4171,PaperlessBilling

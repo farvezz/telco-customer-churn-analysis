@@ -1,0 +1,17 @@
+{
+  "n_customers": 7043,
+  "churn_rate_pct": 26.54,
+  "avg_monthly_charge": 64.76,
+  "monthly_revenue_at_risk": 139130.85,
+  "annual_revenue_at_risk": 1669570.2,
+  "model_name": "Gradient Boosting",
+  "roc_auc": 0.843,
+  "recall_at_020": 0.848,
+  "precision_at_020": 0.484,
+  "cost_offer": 50,
+  "cost_lost": 250,
+  "n_test": 1409,
+  "n_test_churners": 374,
+  "savings_recommended_vs_do_nothing": 46500.0,
+  "savings_recommended_vs_default": 12900.0
+}
