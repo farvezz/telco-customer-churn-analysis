@@ -67,7 +67,7 @@ if page == "Executive Summary":
 
     with col1:
         st.subheader("The headline")
-        st.markdown(f"""
+        st.markdown(rf"""
 - **1 in 4 customers churns** ({s['churn_rate_pct']}%) — well above what's sustainable for a subscription business.
 - Churn is **not random**: it concentrates heavily in customers on month-to-month contracts, in their first
   year, on fiber internet, and paying by electronic check (see *Who's Churning*).
@@ -210,7 +210,7 @@ anyone the model scores above **0.20** probability of churning.
     )
 
     st.subheader("Recommended next steps")
-    st.markdown("""
+    st.markdown(r"""
 1. **Pilot the campaign** on the top-scoring 20-30% of active customers (by predicted churn probability) for one billing cycle, with a control group held out to measure actual offer effectiveness.
 2. **Prioritize by segment**: month-to-month contracts and customers under 12 months tenure first — that's where both churn risk and total customer volume are highest.
 3. **Investigate the fiber-optic and electronic-check signals** — these look like service quality / payment friction issues, not just demographics, and may be fixable independent of any retention offer.
