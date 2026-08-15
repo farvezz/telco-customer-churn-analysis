@@ -6,6 +6,8 @@ presenting the findings.
 
 **Live dashboard:** https://telco-churn-executive-dashboard.streamlit.app
 
+![Executive Summary page of the churn dashboard](dashboard/screenshots/executive_summary.png)
+
 ## Contents
 
 - **`WA_Fn-UseC_-Telco-Customer-Churn.csv`** — raw dataset.
