@@ -4,6 +4,8 @@ Analysis of IBM's Telco Customer Churn dataset (7,043 customers): data cleaning,
 a predictive model, and a cost-optimized retention targeting strategy — plus an executive dashboard for
 presenting the findings.
 
+**Live dashboard:** https://telco-churn-executive-dashboard.streamlit.app
+
 ## Contents
 
 - **`WA_Fn-UseC_-Telco-Customer-Churn.csv`** — raw dataset.
