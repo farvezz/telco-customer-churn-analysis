@@ -18,6 +18,8 @@ presenting the findings.
   - `app.py` — the dashboard.
   - `prepare_data.py` — precomputes the model and cost-analysis artifacts the dashboard reads.
   - `artifacts/` — precomputed CSV/JSON outputs (churn drivers, thresholds, cost policy comparison, etc.).
+- **`powerbi/`** — the same data and findings packaged for Power BI: `data/` has ready-to-import CSVs, and
+  `README.md` is a page-by-page build guide for reproducing the dashboard's four pages in Power BI Desktop.
 
 ## Headline findings
 
