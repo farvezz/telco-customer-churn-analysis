@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Reliability Diagram (Calibration)",
+    "fontSize": 14,
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": "container",
+  "layer": [
+    {
+      "data": { "values": [{ "x": 0, "y": 0 }, { "x": 1, "y": 1 }] },
+      "mark": { "type": "line", "strokeDash": [4, 4], "color": "#8C9BAB" },
+      "encoding": {
+        "x": { "field": "x", "type": "quantitative" },
+        "y": { "field": "y", "type": "quantitative" }
+      }
+    },
+    {
+      "data": { "name": "dataset" },
+      "mark": { "type": "line", "color": "#2E5EAA", "strokeWidth": 2.5, "point": { "color": "#2E5EAA", "size": 60 } },
+      "encoding": {
+        "x": {
+          "field": "predicted",
+          "type": "quantitative",
+          "title": "Mean predicted probability",
+          "scale": { "domain": [0, 1] }
+        },
+        "y": {
+          "field": "observed",
+          "type": "quantitative",
+          "title": "Observed churn rate",
+          "scale": { "domain": [0, 1] }
+        }
+      }
+    }
+  ],
+  "config": {
+    "axis": { "grid": true, "gridColor": "#eee" },
+    "view": { "stroke": null }
+  }
+}

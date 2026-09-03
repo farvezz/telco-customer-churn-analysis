@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "ROC Curve — Gradient Boosting (AUC = 0.843)",
+    "fontSize": 14,
+    "anchor": "start"
+  },
+  "width": "container",
+  "height": "container",
+  "layer": [
+    {
+      "data": { "values": [{ "x": 0, "y": 0 }, { "x": 1, "y": 1 }] },
+      "mark": { "type": "line", "strokeDash": [4, 4], "color": "#8C9BAB" },
+      "encoding": {
+        "x": { "field": "x", "type": "quantitative" },
+        "y": { "field": "y", "type": "quantitative" }
+      }
+    },
+    {
+      "data": { "name": "dataset" },
+      "mark": {
+        "type": "line",
+        "interpolate": "step-after",
+        "color": "#2E5EAA",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "fpr",
+          "type": "quantitative",
+          "title": "False Positive Rate",
+          "scale": { "domain": [0, 1] }
+        },
+        "y": {
+          "field": "tpr",
+          "type": "quantitative",
+          "title": "True Positive Rate",
+          "scale": { "domain": [0, 1] }
+        }
+      }
+    }
+  ],
+  "config": {
+    "axis": { "grid": true, "gridColor": "#eee" },
+    "view": { "stroke": null }
+  }
+}

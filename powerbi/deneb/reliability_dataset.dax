@@ -1,0 +1,8 @@
+// Paste into Deneb's "Edit dataset" (DAX) panel for the reliability/calibration visual.
+EVALUATE
+SELECTCOLUMNS(
+    reliability,
+    "predicted", reliability[predicted],
+    "observed", reliability[observed]
+)
+ORDER BY [predicted]

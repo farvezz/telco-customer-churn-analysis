@@ -54,9 +54,35 @@ Source: `policy_costs.csv` and `threshold_table.csv`.
 
 ## 5. Page 4 — Model Performance (Appendix)
 
-- **Line chart**: `roc_curve.csv`, `fpr` on X, `tpr` on Y.
-- **Line chart**: `reliability.csv`, `predicted` on X, `observed` on Y, plus a reference diagonal line.
+- **Line chart**: `roc_curve.csv`, `fpr` on X, `tpr` on Y. ⚠️ **Known native-visual bug**: `roc_curve` has 467
+  rows and some `fpr` values repeat (up to 6 rows share one `fpr` — normal for a real ROC curve, it's how the
+  vertical step segments are represented). Power BI's native line chart aggregates duplicate-x rows by
+  **Sum** by default, which pushes the Y-axis past 1.0 and renders a jagged sawtooth instead of a curve. Quick
+  fix: change the field's aggregation from Sum to **Average** in the Values well. Better fix: build it in
+  Deneb instead — see section 6, which avoids the aggregation problem entirely.
+- **Line chart**: `reliability.csv`, `predicted` on X, `observed` on Y, plus a reference diagonal line. (This
+  one has only 10 rows with no duplicate `predicted` values, so the native chart renders correctly as-is.)
 - **Matrix/table visual**: `confusion_matrix_020.csv`.
+
+## 6. Optional: custom visuals (HTML Viewer + Deneb)
+
+Two free AppSource custom visuals unlock things the native visuals can't do: **HTML Viewer** (or the
+Microsoft-certified **"HTML Content (Lite)"** — prefer that one if data governance matters, since the plain
+HTML Viewer isn't certified and can render externally-sourced content) renders a DAX measure's HTML string
+directly; **Deneb** renders a Vega-Lite chart spec against a DAX-defined dataset, which sidesteps Power BI's
+forced aggregation on the axis field entirely — exactly what the ROC curve needs.
+
+Install both via `Insert > Get more visuals` in Power BI Desktop, search AppSource, add to canvas.
+
+- **`deneb/roc_curve_dataset.dax`** + **`deneb/roc_curve_spec.json`** — paste the DAX into Deneb's "Edit
+  dataset" panel, the JSON into its spec editor. Renders the ROC curve correctly (no Sum-aggregation bug)
+  with a dashed diagonal reference line.
+- **`deneb/reliability_dataset.dax`** + **`deneb/reliability_spec.json`** — same pattern for the calibration
+  curve (not required since the native version already renders correctly, but more visually consistent with
+  the ROC curve if you switch both to Deneb).
+- **`html_viewer/recommendation_card.dax`** — a new measure on `kpi_summary`; drop an HTML Viewer visual on
+  the canvas and bind this measure to it. Renders the same styled recommendation callout (bordered card,
+  bold colored numbers) used in the Streamlit dashboard — something a native Power BI text box can't do.
 
 ## Notes
 
