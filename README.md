@@ -18,10 +18,10 @@ presenting the findings.
   - `app.py` — the dashboard.
   - `prepare_data.py` — precomputes the model and cost-analysis artifacts the dashboard reads.
   - `artifacts/` — precomputed CSV/JSON outputs (churn drivers, thresholds, cost policy comparison, etc.).
-- **`telco_churn.pbix`** — the built Power BI report (4 pages, matching the Streamlit dashboard's structure).
-- **`powerbi/`** — the source package behind the `.pbix`: `data/` has the ready-to-import CSVs, `deneb/` and
-  `html_viewer/` have custom-visual specs (Vega-Lite charts and DAX-generated HTML cards) for the visuals
-  native Power BI can't render correctly, and `README.md` is the full build guide.
+- **`telco_churn.pbix`** — a Power BI dashboard covering the same four areas as the Streamlit app (executive
+  summary, churn drivers, financial recommendation, model performance). The semantic model — tables, DAX
+  measures — was built by connecting directly to a live Power BI Desktop session, then the report visuals
+  were placed on the canvas manually. Open it in Power BI Desktop to explore.
 
 ## Headline findings
 

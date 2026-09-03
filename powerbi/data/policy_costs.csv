@@ -1,5 +1,0 @@
-policy,total_cost,savings_vs_do_nothing
-Do nothing,93500,0
-Target everyone,70450,23050
-Default threshold (0.50),59900,33600
-Recommended threshold (0.20),47000,46500
