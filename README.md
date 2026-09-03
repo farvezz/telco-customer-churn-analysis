@@ -18,8 +18,10 @@ presenting the findings.
   - `app.py` — the dashboard.
   - `prepare_data.py` — precomputes the model and cost-analysis artifacts the dashboard reads.
   - `artifacts/` — precomputed CSV/JSON outputs (churn drivers, thresholds, cost policy comparison, etc.).
-- **`powerbi/`** — the same data and findings packaged for Power BI: `data/` has ready-to-import CSVs, and
-  `README.md` is a page-by-page build guide for reproducing the dashboard's four pages in Power BI Desktop.
+- **`telco_churn.pbix`** — the built Power BI report (4 pages, matching the Streamlit dashboard's structure).
+- **`powerbi/`** — the source package behind the `.pbix`: `data/` has the ready-to-import CSVs, `deneb/` and
+  `html_viewer/` have custom-visual specs (Vega-Lite charts and DAX-generated HTML cards) for the visuals
+  native Power BI can't render correctly, and `README.md` is the full build guide.
 
 ## Headline findings
 
